@@ -29,5 +29,13 @@ cp "$EMON_DIR/default.settings.php" "$EMON_DIR/settings.php"
 sed -i "s/_DB_USER_/emoncms/" "$EMON_DIR/settings.php"
 sed -i "s/_DB_PASSWORD_/$MYSQL_PASSWORD/" "$EMON_DIR/settings.php"
 
+echo "==========================================================="
+echo "The username and password for the emoncms user is:"
+echo ""
+echo "   username: emoncms"
+echo "   password: $MYSQL_PASSWORD"
+echo ""
+echo "==========================================================="
+
 # Cleanup
 rm init.sql

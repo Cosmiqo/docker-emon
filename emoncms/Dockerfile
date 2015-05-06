@@ -24,4 +24,4 @@ COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 EXPOSE 80 3306
 RUN bash /etc/apache2/envvars
 WORKDIR /var/www/emoncms
-CMD ["/usr/bin/supervisord"]
+CMD ["/usr/bin/supervisord", "-c", "/etc/supervisor/conf.d/supervisord.conf"]
